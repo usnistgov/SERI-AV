@@ -1,3 +1,4 @@
+xhost +
 docker run -it \
 	-e DISPLAY=${DISPLAY} \
 	--privileged \
@@ -7,3 +8,4 @@ docker run -it \
 	--gpus all \
 	--network host \
 	--ipc=host seri-av:latest
+xhost -
