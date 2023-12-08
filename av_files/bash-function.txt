@@ -1,0 +1,29 @@
+function seri_demo(){
+  AMENT_PREFIX_PATH=/opt/ros/galactic
+  # TODO: Use correct path
+  export SERI_ROOT=/seri_av
+  # source ROS
+  source /opt/ros/galactic/setup.bash
+  # source CARLA
+  export CARLA_ROOT=$SERI_ROOT/CARLA_0.9.12
+  export SCENARIO_RUNNER_ROOT=$SERI_ROOT/scenario_runner
+  export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
+  export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/util
+  export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
+  export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents
+  export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.12-py3.7-linux-x86_64.egg
+
+  # source AUTOWARE
+  source /autoware/install/setup.bash
+  # source DEMO WS
+  source $SERI_ROOT/seri_ros_ws/install/setup.bash
+  # aliases
+  alias 1-carla_start="su carla_user -c 'sh ${CARLA_ROOT}/CarlaUE4.sh -quality-level=Low -prefernvidia -world-port=2000'"
+  alias 2-bridge_start="ros2 launch carla_autoware_bridge carla_autoware_demo.launch.py town:=Town04 ego_vehicle_role_name:=ego_vehicle view:=true"
+  alias 3-scenario_start="cd $SERI_ROOT/scenario_runner && python3 scenario_runner.py --openscenario Reveal_wEgo52.xosc --waitForEgo"
+  alias 4-autoware_start="ros2 launch carla_launch e2e_simulator.launch.xml map_path:=$SERI_ROOT/autoware_map/carla-town-4 vehicle_model:=carla_tesla_model3 sensor_model:=sample_sensor_kit"
+  alias commander_start="ros2 launch seri_demo demo.launch.py"
+  alias 5-run="ros2 launch seri_demo demo.launch.py"
+  alias 6-run="ros2 launch seri_demo vehicle.launch.py"
+}
+

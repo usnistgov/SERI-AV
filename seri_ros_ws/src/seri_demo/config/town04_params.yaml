@@ -1,0 +1,53 @@
+rv1:  # Name of your Node
+  ros__parameters:
+    init_pos_x: 9.0
+    init_pos_y: -50.0
+    init_pos_z: 0.0
+    init_rot_x: 0.0
+    init_rot_y: 0.0
+    init_rot_z: 0.7072
+    init_rot_w: 0.7072
+    goal_pos_x: 7.5
+    goal_pos_y: 213.0
+    goal_pos_z: 0.0
+    goal_rot_x: 0.0
+    goal_rot_y: 0.0
+    goal_rot_z: 0.7072
+    goal_rot_w: 0.7072
+    emergency_break_distance: 100.0
+
+rv2:  # Name of your Node
+  ros__parameters:
+    init_pos_x: 9.0
+    init_pos_y: -70.0
+    init_pos_z: 0.0
+    init_rot_x: 0.0
+    init_rot_y: 0.0
+    init_rot_z: 0.7072
+    init_rot_w: 0.7072
+    goal_pos_x: 7.5
+    goal_pos_y: 213.0
+    goal_pos_z: 0.0
+    goal_rot_x: 0.0
+    goal_rot_y: 0.0
+    goal_rot_z: 0.7072
+    goal_rot_w: 0.7072
+
+hv:  # Name of your Node
+  ros__parameters:
+    init_pos_x: -1.46
+    init_pos_y: -275.0
+    init_pos_z: 0.0
+    init_rot_x: 0.0
+    init_rot_y: 0.0
+    init_rot_z: 0.7
+    init_rot_w: 1.0
+    goal_pos_x: -351.0
+    goal_pos_y: -15.68
+    goal_pos_z: 0.0
+    goal_rot_x: 0.0
+    goal_rot_y: 0.0
+    goal_rot_z: 1.0
+    goal_rot_w: 0.019
+    emergency_break_distance: 20.0
+    
