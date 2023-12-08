@@ -2,6 +2,9 @@
 
 This repository contains a containerized version of the SERI Autonomous Vehicle demo showcased at the 2023 NIST Autonomous Vehicle Workshop.
 
+## Prerequisites
+This repository is intended to run on a linux system that has an NVIDIA GPU, Docker Engine, and NVIDIA Container Toolkit installed.
+
 ## Instructions
 
 1. Build the docker image: `./build_av_image.sh`
